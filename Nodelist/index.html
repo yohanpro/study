@@ -11,18 +11,16 @@
     <div class="container">2</div>
     <div class="container">3</div>
     <div class="container">4</div>
+
+    <script src="./test.js"></script>
   </body>
 </html>
 
 <script>
   const containers = document.querySelectorAll(".container");
-  console.log("🚀 ~ file: index.html ~ line 19 ~ containers", containers);
+  console.log("containers:", containers);
 
-  // const number1 = containers.filter((container) => container.innerText === "1");
+  const arr = [1, 2, 3, 4];
 
-  const number1 = Array.prototype.filter.call(
-    containers,
-    (container) => container.innerText === "1"
-  );
-  console.log("🚀 ~ file: index.html ~ line 24 ~ number1", number1);
+  const iterator = arr[Symbol.iterator]();
 </script>
